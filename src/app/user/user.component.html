@@ -2,20 +2,22 @@
     <div class="row">
         <div class="col-md-3"> </div>
         <div class="col-md-6">
-            <form>
+            <form #goalForm='ngForm'>
                 <div class="form-group">
                     <img class="img-fluid" src="assets/github.jpg" alt="">
                     <div class="input-group">
-                        <span class="input-group-addon"><button type="submit" class="btn-success"><i class="fa fa-search" aria-hidden="true"></i></button></span>
-                        <input type="text" class="form-control" placeholder="User Name" name="username">
+                        <span class="input-group-addon"><button type="submit" class="btn-success"><i class="fa fa-search" 
+                        aria-hidden="true"></i></button></span>
+                        <input type="text" class="form-control" placeholder="User Name" name="username" [(ngModel)]="username">
                     </div>
                 </div>
             </form>
         </div>
+        <div class="col-md-3"></div>
     </div>
 
     <div>
-        <div class="card bd-0">
+        <div class="card bd-0" *ngIf="user">
             <div class="card-header bg-dark">
                 <ul class="nav-tabs nav-tabs-for-dark card-header-tabs">
                     <li class="nav-item">

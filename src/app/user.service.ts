@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
 import { User } from './user';
 import { Repos } from './repos'
-import { HttpClient, HttpClientModule} from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -9,7 +10,21 @@ import { HttpClient, HttpClientModule} from '@angular/common/http';
 
 export class UserService {
  user!:User;
- 
+ private username:string | undefined;
+  private url = 'https://api.github.com/users/';
+ private clientid = ""
 
-  constructor(private http:HttpClient) { }
+
+  constructor(private http:HttpClient) {
+    this.username = "Isaac23-K";
+   }
+   getUser():Observable<User>{
+     return this.http.get<User>(this.url + this.username + "?cliient_id" + this.clientid).pipe();
+   }
+   getRepos(): Observable<Repos[]>{
+     return this.http.get<Repos[]>(this.url + this.username + "/repos?client_id" + this.clientid).pipe();
+   }
+   updateProfile(username:string){
+     this.username = username;
+   }
 }
