@@ -7,8 +7,9 @@ export class User {
     public following:number ,
     public login:string,
     public email:string,
+    public joined:Date,
     public user:string,
-    public repos:string,
+    public repos:any[],
     public username:string,
     public avatar_url:string){
   }

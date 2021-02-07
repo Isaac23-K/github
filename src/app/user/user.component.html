@@ -12,11 +12,61 @@
                 </div>
             </form>
         </div>
-
-        <div class="col-md-3"></div>
     </div>
 
     <div>
-        <div class="card bd-0"></div>
+        <div class="card bd-0">
+            <div class="card-header bg-dark">
+                <ul class="nav-tabs nav-tabs-for-dark card-header-tabs">
+                    <li class="nav-item">
+                        <a class="nav-link bd-0 active pd-y-8" href="#user" data-toggle="tab">User</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link bd-0 tx-gray-light" href="#repositories" data-toggle="tab">Repositories</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link bd-0 tx-gray-light" href="#contact" data-toggle="tab">Social</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="tab-content card-body">
+                <div class="tab-pane fade show active" id="user">
+                    <div class="row">
+                        <div class="col-md-4">
+
+                        </div>
+                        <div class="col-md-8">
+                            <h5></h5>
+                            <h6></h6>
+                            <p>Email:</p>
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="tabe-pane fade " id="repositories">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h5>Repositories</h5>
+                            <div *ngFor="">
+                                <p>
+                                    <strong></strong>:
+                                </p>
+                                <p> </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="table-pane fade" id="contact">
+                    <div class="row">
+                        <div class="col-md-12">
+
+                            <p>Email:</p>
+                            <p>Followers:</p>
+                            <p>Following:</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
