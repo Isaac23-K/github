@@ -33,11 +33,11 @@
                 <div class="tab-pane fade show active" id="user">
                     <div class="row">
                         <div class="col-md-4">
-
+                            <img class="img-thumbnail" src="" alt="">
                         </div>
                         <div class="col-md-8">
-                            <h5></h5>
-                            <h6></h6>
+                            <h5>{{user.login}}</h5>
+                            <h6>{{user.name}}</h6>
                             <p>Email:</p>
                             <p></p>
                         </div>
@@ -47,11 +47,12 @@
                     <div class="row">
                         <div class="col-md-12">
                             <h5>Repositories</h5>
-                            <div *ngFor="">
+                            <div *ngFor="let repo of repos">
                                 <p>
-                                    <strong></strong>:
+                                    <strong>{{repo.name}}</strong>:
                                 </p>
-                                <p> </p>
+                                <p>{{repo.description}} </p>
+
                             </div>
                         </div>
                     </div>
@@ -59,10 +60,9 @@
                 <div class="table-pane fade" id="contact">
                     <div class="row">
                         <div class="col-md-12">
-
-                            <p>Email:</p>
-                            <p>Followers:</p>
-                            <p>Following:</p>
+                            <p>Email:{{user.email}}</p>
+                            <p>Followers:{{user.followers}}</p>
+                            <p>Following:{{user.following}}</p>
                         </div>
                     </div>
                 </div>
