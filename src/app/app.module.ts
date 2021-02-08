@@ -7,11 +7,13 @@ import { UserService } from './user.service';
 import { UserComponent } from './user/user.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    UserComponent
+    UserComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
