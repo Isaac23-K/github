@@ -2,10 +2,10 @@
   - Gitsearch
 
 ## Author
-  -Isaac Kaptoge
+  - Isaac Kaptoge
   
 ## Descriptions
--The website basically works in a way that you can search you Github account and get to explore     and get to view your account in Github. The project basically uses the github API to collect i    nformation that are required.Whe you ether the github name you will see the profile.
+- The website basically works in a way that you can search you Github account and get to explore     and get to view your account in Github. The project basically uses the github API to collect i    nformation that are required.Whe you ether the github name you will see the profile.
  ## Technologies Used
 - This project was generated with Angular CLI
 - HTML & CSS (Bootstrap)
