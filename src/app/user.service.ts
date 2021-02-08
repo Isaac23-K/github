@@ -3,6 +3,7 @@ import { User } from './user';
 import { Repos } from './repos'
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { map } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
@@ -11,7 +12,7 @@ import { Observable } from 'rxjs';
 export class UserService {
  user!:User;
  private username:string | undefined;
-  private url = 'https://api.github.com/users/';
+ private url = 'https://api.github.com/users/';
  private clientid = "6527906e554b491b7085a6ff16cbf3a3fafacb2e"
 
 
@@ -19,10 +20,10 @@ export class UserService {
     this.username = "Isaac23-K";
    }
    getUser():Observable<User>{
-     return this.http.get<User>(this.url + this.username + "?cliient_id" + this.clientid).pipe();
+     return this.http.get<User>(this.url + this.username + "?cliient_id" + this.clientid).pipe(map(res => res));
    }
    getRepos(): Observable<Repos[]>{
-     return this.http.get<Repos[]>(this.url + this.username + "/repos?client_id" + this.clientid).pipe();
+     return this.http.get<Repos[]>(this.url + this.username + "/repos?client_id" + this.clientid).pipe(map(res => res));
    }
    updateProfile(username:string){
      this.username = username;

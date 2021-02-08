@@ -28,7 +28,7 @@ getProfile(){
   
  })
 }
-  ngOnInit(): void {
+  ngOnInit() {
   }
 
 }
