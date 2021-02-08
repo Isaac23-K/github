@@ -8,12 +8,14 @@ import { UserComponent } from './user/user.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { ClickDirective } from './click.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     UserComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    ClickDirective
   ],
   imports: [
     BrowserModule,
