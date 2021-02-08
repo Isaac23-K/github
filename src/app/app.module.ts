@@ -9,13 +9,15 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { ClickDirective } from './click.directive';
+import { DateCountPipe } from './date-count.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     UserComponent,
     NotFoundComponent,
-    ClickDirective
+    ClickDirective,
+    DateCountPipe
   ],
   imports: [
     BrowserModule,
