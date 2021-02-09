@@ -34,4 +34,4 @@ https://isaac23-k.github.io/github/
 - Email:ikaptoge@yahoo.com
 
 ## license
-MIT
+- MIT
